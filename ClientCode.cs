@@ -61,7 +61,7 @@ namespace ClientApplication
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Socket Connection failed, aborting(like your mom should have)");
+                    Console.WriteLine("Socket Connection failed, aborting");
                 }
                 s.Receive(msg_bytes);
                 using (Stream str = new MemoryStream(msg_bytes))
@@ -87,7 +87,7 @@ namespace ClientApplication
         {
             while (true)
             {
-                byte[] msg_bytes = new byte[1024];
+                byte[] msg_bytes = new byte[256];
                 s.Receive(msg_bytes);
                 csp.ImportParameters(priv_key);
                 msg_bytes = csp.Decrypt(msg_bytes, false);
