@@ -1,4 +1,4 @@
-# SimpleTextingServer
+# SimpleTextingServer 1.0
 C# Terminal application for a peer to peer texting server
 1. Can host up to 16 connections
 2. Includes Peer to Peer Encryption
